@@ -1,0 +1,20 @@
+h1 {
+
+    font-size: 72pt;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+h2 {
+
+    text-align: center;
+
+}
+
+.no-underline {
+
+    text-decoration: none;
+
+}

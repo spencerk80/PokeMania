@@ -1,0 +1,16 @@
+.nav-item {
+
+    width: 6em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px dotted black
+
+}
+
+.nav-item:hover {
+
+    cursor: pointer;
+
+}

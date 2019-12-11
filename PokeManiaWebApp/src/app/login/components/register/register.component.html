@@ -1,0 +1,53 @@
+<div class="not-boostrap-tooltip">
+    <form>
+        <div class="input" (mouseenter)="showUsernameError()" (mouseleave)="clearError()">
+            <label for="username">Username<span class="red">*</span></label>
+            <input [(ngModel)]="username" [style.background-color]="usernameError ? 'rgba(255,0,0,0.7)' : 'white'" type="text" name="username" id="username-input">
+        </div>
+        <div class="input">
+            <label for="password1">Password<span class="red">*</span></label>
+            <input [(ngModel)]="password1" [style.background-color]="passwordError ? 'rgba(255,0,0,0.7)' : 'white'" (mouseenter)="showpasswordError()" (mouseleave)="clearError()" type="password" name="password1" id="password1-input">
+        </div>
+        <div class="input" (mouseenter)="showpassword2Error()" (mouseleave)="clearError()">
+            <label for="password2">Verify password<span class="red">*</span></label>
+            <input [(ngModel)]="password2" [style.background-color]="password2Error ? 'rgba(255,0,0,0.7)' : 'white'" type="password" name="password2" id="password2-input">
+        </div>
+        <div class="input">
+            <label for="firstname">Firstname</label>
+            <input [(ngModel)]="firstname" type="text" name="firstname" id="firstname-input">
+        </div>
+        <div class="input">
+            <label for="lastname">Lastname</label>
+            <input [(ngModel)]="lastname" type="text" name="lastname" id="lastname-input">
+        </div>
+        <div class="input" (mouseenter)="showPokemonError()" (mouseleave)="clearError()">
+            <label for="starter">Pick a starter pokemon<span class="red">*</span></label>
+            <select [(ngModel)]="pokemon" [style.background-color]="pokemonError ? 'rgba(255,0,0,0.7)' : 'white'" name="starter" id="starter-input">
+                <option value=1>Bulbasaur</option>
+                <option value=4>Charmander</option>
+                <option value=7>Squirtle</option>
+                <option value=25>Pikachu</option>
+                <option value=152>Chikorita</option>
+                <option value=155>Cyndaquil</option>
+                <option value=158>Totodile</option>
+                <option value=252>Treecko</option>
+                <option value=255>Torchic</option>
+                <option value=258>Mudkip</option>
+                <option value=387>Turtwig</option>
+                <option value=390>Chimchar</option>
+                <option value=393>Piplup</option>
+                <option value=495>Snivy</option>
+                <option value=498>Tepig</option>
+                <option value=501>Oshawott</option>
+                <option value=650>Chespin</option>
+                <option value=653>Fennekin</option>
+                <option value=656>Froakie</option>
+                <option value=722>Rowlet</option>
+                <option value=725>Litten</option>
+                <option value=728>Popplio</option>
+            </select>
+        </div>
+        <button (click)="submit()" type="button">Register</button>
+    </form>
+    <span [style.visibility]="showError ? 'visible' : 'hidden'" class="not-bootstrap-tooltiptext">{{errorMsg}}</span>
+</div>

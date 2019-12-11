@@ -1,0 +1,13 @@
+<div *ngIf="isDataReady" id="battle-field">
+    <progress id="trainer-hp" value={{trainerHP}} max={{pokemon1.hp}}></progress>
+    <div class="pokemon" id="trainer">
+        <img class="pokemon-img" src={{pokemon1.backImg}} alt="Trainer pokemon">
+    </div>
+    <h1 id="trainer-dmg" [style.visibility]="showTrainerDmg ? 'visible' : 'hidden'">{{trainerDmg}}</h1>
+    <h1 [style.visibility]="showOpponentDmg ? 'visible' : 'hidden'">{{opponentDmg}}</h1>
+    
+    <div class="pokemon" id="opponent">
+        <img class="pokemon-img" src={{pokemon2.frontImg}} alt="Opponent pokemon">
+    </div>
+    <progress value={{opponentHP}} max={{pokemon2.hp}}></progress>
+</div>

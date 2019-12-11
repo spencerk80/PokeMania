@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+        <div id="friendstitle" class="row">
+            <div class="col-8">Friends List</div>
+            <!-- <div class="col-3">New Friends</div> -->
+            <div class="col-4">Find Friends</div>
+        </div>
+    
+        <div id="friendsbody" class="row">
+                <div id="" class="col-8"><br>
+                   
+                    
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Friends List" aria-label="Search">
+                    <br>
+                   
+                   <div *ngFor="let friend of friends">
+                        <button style="padding: 20px; width: 300px" class="btn btn-outline-primary">
+                                <div>{{friend.firstname}} {{friend.lastname}} / <small>{{friend.username}}</small></div>
+                                <div class="text-dark" aria-hidden="true"><small>Wins: {{friend.wins}}</small></div>
+                                <div class="text-dark" aria-hidden="true"><small>Losses: {{friend.losses}}</small></div>
+                            </button>
+                            <br><br>
+                    </div>
+    
+                                
+                </div>
+                
+                <!-- <div id="" class="col-3"><br>
+                            
+                    <button style="padding: 20px; width: 225px" class="btn btn-outline-primary" (click)="open('autofocus')">
+                        <div>Name of user / <small>username</small></div>
+                        <div class="text-dark" aria-hidden="true"><small>Wins:</small></div>
+                        <div class="text-dark" aria-hidden="true"><small>Losses:</small></div>
+                    </button>
+                    <br><br>
+                </div> -->
+
+                <div id="" class="col-4"><br>
+                    <input [(ngModel)]="newFriend" class="form-control mr-sm-2" style="padding: 20px;" type="search" placeholder="Search by username" aria-label="Search" (ngModelChange)="findFriend()">
+                    <br>
+                    
+                    <div *ngIf="this.username != null">
+                        <button style="padding: 20px; width: 225px" class="btn btn-outline-primary" (click)="addFriend()">
+                            <div>{{this.firstname}} {{this.lastname}} / <small>{{this.username}}</small></div>
+                            <div class="text-dark" aria-hidden="true"><small>Wins: {{this.wins}}</small></div>
+                            <div class="text-dark" aria-hidden="true"><small>Losses: {{this.losses}}</small></div>
+                        </button>
+                        <br><br>
+                </div>
+
+
+                </div>
+            </div>
+    </div>

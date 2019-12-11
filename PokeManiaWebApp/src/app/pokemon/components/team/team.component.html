@@ -1,0 +1,8 @@
+<div class="container">
+        <div class="row">
+            <div *ngFor="let poke of pokemon" class="card-column col-lg-3 col-sm-6 col-xs-12">
+                <app-pokemon-card [pokemon]="poke"></app-pokemon-card>
+                <button class="btn btn-success"  (click)="toBox(poke)">Remove from team</button>
+            </div>
+        </div>
+    </div>
