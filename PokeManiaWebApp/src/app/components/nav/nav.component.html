@@ -1,0 +1,7 @@
+<div id="nav-bar">
+    <div *ngIf="user == null" class="nav-item" routerLink="">Login</div>
+    <app-logout *ngIf="user != null"></app-logout>
+    <div *ngIf="user != null" class="nav-item" routerLink="/poke">Pokemon</div>
+    <div *ngIf="user != null" class="nav-item" routerLink="/prepare%20for%20battle">Battle</div>
+    <div *ngIf="user != null" class="nav-item" routerLink="/friends">Friends</div>
+</div>

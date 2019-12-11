@@ -1,0 +1,19 @@
+<form>
+    <h6 id="error" *ngIf="errorExists">{{errorMsg}}</h6>
+    <div class="input">
+        <label for="username">Username</label>
+        <input [(ngModel)]="username" type="text" name="username" id="username-input" placeholder="Exmpl: Trainer42">
+    </div>
+    <div class="input">
+        <label for="password">Password</label>
+        <input [(ngModel)]="password" type="password" name="password" id="password-input" placeholder="Exmpl: P4ssw0rd">
+    </div>
+    <div id="buttons">
+        <button (click)="login()" type="button">Sign in</button>
+        <button routerLink="register" type="button">New user?</button>
+    </div>
+</form>
+
+<video autoplay loop>
+    <source src="../../../../assets/Eevee.mp4" type="video/mp4">
+</video>

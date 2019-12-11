@@ -1,0 +1,5 @@
+<h3>Select a friend to battle</h3>
+<div id="list">
+    <button *ngFor="let friend of friends" (click)="fight(friend.id)" type="button">{{friend.username}}</button>
+    <button (click)="fight(-2)" type="button">NPC</button>
+</div>

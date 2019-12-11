@@ -1,0 +1,68 @@
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(126, 126, 235);
+    min-height: 450px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive, times, arial;
+    font-size: 14pt;
+
+}
+
+button {
+
+    font-family: cursive, times, arial;
+    font-size: 14pt;
+    margin-top: 5px;
+}
+
+input {
+
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.input {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.red {
+
+    color: red;
+    font-size: 20pt;
+
+}
+
+.not-boostrap-tooltip {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.not-boostrap-tooltip .not-bootstrap-tooltiptext {
+
+    visibility: hidden;
+    width: auto;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+}
